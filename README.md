@@ -1,6 +1,6 @@
 # Portable virtualenv builder
 
-This tool uses a Docker image that will package a portable virtualenv that should be compatible with the corresponding OS.
+This tool uses a Docker image that will package a portable virtualenv. The generated package should be compatible with the base OS of the image.
 
 For now, available OSes are :
  - Centos 6
@@ -12,7 +12,7 @@ Build the packaging image :
 docker image build -t packaging_image:latest -f <selected OS>.Dockerfile .
 ```
 
-Once this image is built, you can use it to generate portable virtualenv TARs. It will work as a command line tool that expect a PIP-style requirement input on STDIN and outputs a gzipped tar archive of the corresponding virtualenv on STDOUT.
+Once this image is built, you can use it to generate portable virtualenv TARs. It will work as a command line tool that expects a PIP-style requirement input on STDIN and outputs a gzipped tar archive containing the corresponding virtualenv on STDOUT.
 
 Example :
 ```
