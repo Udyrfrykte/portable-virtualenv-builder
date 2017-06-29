@@ -5,8 +5,7 @@
 This tool uses a Docker image that will package a portable virtualenv that should be compatible with the corresponding OS.
 
 For now, available OSes are :
- - Centos
-  - 6
+ - Centos 6
 
 Build the packaging image :
 ```
@@ -20,7 +19,7 @@ Example :
 echo $'requests==2.18.1\nchardet==3.0.4' | docker run --rm -i packaging_image > venv.tgz
 ```
 
-Optionally you can specify build dependencies that may be needed to install the PIP libraries using the BUILD_PACKAGES environment variable.
+Additionally, you can specify build dependencies that may be needed to install the PIP libraries using the BUILD_PACKAGES environment variable.
 
 Example :
 ```
